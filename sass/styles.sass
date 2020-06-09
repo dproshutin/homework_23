@@ -1,0 +1,23 @@
+@import 'mixins'
+@import 'vars'
+@import 'header'
+@import 'promo'
+@import 'about'
+@import 'footer'
+
+body
+	background: $bg_color
+	font-size: $content_font_size
+	font-family: $content_font
+	line-height: $content_line_height
+
+.container
+	max-width: 1030px
+	padding: 0 15px
+	margin: 0 auto
+a
+	color: inherit
+	&:hover
+		text-decoration: none
+ul
+	list-style: none

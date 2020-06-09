@@ -1,0 +1,62 @@
+.header
+	position: relative
+	z-index: 3
+	font-size: $content_font_size
+	font-weight: 700
+	color: $bg_color
+	+linearGradient(#2a2a2a, #030303)
+	padding-bottom: 7px
+	+boxShadow(0px 1px 1px 0px rgba(1, 6, 9, 1))
+	border-bottom: 1px solid #232323
+	.container
+		display: flex
+		align-items: center
+		+sm
+			justify-content: space-between
+	&_menu
+		+sm
+			display: none
+			position: absolute
+			top: 26%
+			right: 18%
+		&_list
+			display: flex
+			+sm
+				flex-direction: column
+			margin: 0
+			padding: 0
+			margin-left: 48px
+			padding-top: 7px
+		&_item
+			padding-left: 30px
+			text-transform: capitalize
+			@extend %textShadowWhite
+			&:first-child
+				padding-left: 0
+			+sm
+				padding-left: 0
+				margin-bottom: 20px
+		&_link
+			&:hover
+				color: $design_color
+.toggle_menu
+	position: relative
+	display: none
+	+sm
+		display: block
+	width: 40px
+	height: 40px
+	background: url("../img/ic-bars.jpg") 0 0 no-repeat
+	transition: 0.2s
+	cursor: pointer
+	&::after
+		position: absolute
+		top: 0
+		right: 33px
+		display: block
+		content: ''
+		width: 60px
+		height: 80px
+		background: transparent
+.toggle_menu:hover + .header_menu, .header_menu:hover 
+	display: block

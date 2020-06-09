@@ -1,0 +1,41 @@
+=linearGradient($top, $bottom)
+	background: $top
+	background: -moz-linear-gradient(top,  $top 0%, $bottom 100%)
+	background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%)
+	background: -o-linear-gradient(top,  $top 0%,$bottom 100%)
+	background: -ms-linear-gradient(top,  $top 0%,$bottom 100%)
+	background: linear-gradient(to bottom,  $top 0%,$bottom 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$top, endColorstr=$bottom,GradientType=0 )
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 )
+=boxShadow($x, $y, $blur, $size, $color, $inset)
+	-webkit-box-shadow: $x $y $blur $size $color $inset
+	-moz-box-shadow: $x $y $blur $size $color $inset
+	box-shadow: $x $y $blur $size $color $inset
+=box-shadow($shadow...)
+	-webkit-box-shadow: $shadow
+	-moz-box-shadow: $shadow       
+	box-shadow: $shadow
+=boxShadow($shadow1, $shadow2:false)
+	$params: $shadow1
+	@if $shadow2 
+		$params: $shadow1, $shadow2
+	-webkit-box-shadow: $params
+	-moz-box-shadow: $params
+	box-shadow: $params
+=roundedCorners($size)
+	-webkit-border-radius: $size + px
+	-moz-border-radius: $size + px
+	border-radius: $size + px
+=textShadow($x, $y, $blur, $color)
+	text-shadow: $x $y $blur, $color
+%textShadowWhite
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3)
+=lg
+	@media screen and (max-width: 992px)
+		@content
+=md
+	@media screen and (max-width: 768px)
+		@content
+=sm
+	@media screen and (max-width: 576px)
+		@content

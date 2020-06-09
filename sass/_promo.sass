@@ -1,0 +1,52 @@
+.promo
+	+linearGradient(#135481, #32aae8)
+	+boxShadow(0px 5px 20px 15px rgba(183, 182, 182, 1), 0px 1px 70px 10px rgba(254, 254, 254, 0.7))
+	&_text_wrapper
+		top: 25.4%
+		left: 9.7%
+		width: 70%
+		+lg
+			top: 0%
+			left: 20%
+			z-index: 2
+		+sm
+			left: 2%
+			width: 80%
+	.container
+		.row
+			.col
+				h3
+					margin-bottom: 9.7%
+					+lg
+						margin: 10% 0 5%
+					+sm
+						margin: 6% 0 2%
+					font-size: 26px
+					font-weight: 400
+					font-family: $content_font
+					line-height: 30px
+					color: $design_color
+					+sm
+						font-size: 20px
+				a
+					display: inline-block
+					padding: 9px 34px 11px 32px
+					font-size: 20px
+					font-weight: 400
+					font-family: $title_font
+					color: $bg_color
+					@extend %textShadowWhite
+					+linearGradient(#292929, #020202)
+					border: 1px solid #000
+					+roundedCorners(3)
+					+boxShadow(1px 1px 2px 0px rgba(163, 212, 238, 1))
+					&:hover
+						+linearGradient(lighten(#292929, 10%), lighten(#020202, 10%))
+					+sm
+						font-size: 12px
+						padding: 9px 10px 11px 10px
+				img
+					display: inline-block
+					padding: 10px 0 5px
+					+sm
+						width: 80%
